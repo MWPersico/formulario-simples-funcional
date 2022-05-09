@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Marcos Willian Gonçalves Pérsico">
+    <title>Formulário Javascript</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>TESTANDO FORMULÁRIOS COM HTML E JAVASCRIPT</h1>
+    <img src="logo2.png" alt="Logo da empresa">
+    <form id="formulario" name="formulario">
+     <header>
+        <h2>Nos ajude a melhorar...</h2>
+        <img src="logo1.png" alt="Logo" width="60px">
+     </header>
+     <main>
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" style="font-family: FontAwesome;" placeholder="&#xf2bb; Escreva o seu nome" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" style="font-family: FontAwesome;" placeholder="&#xf0e0; Escreva o seu e-mail" required>
+        <br>
+        <label for="msg">Dê o seu feedback:</label>
+        <br>
+        <textarea name="msg" id="msg" cols="36" rows="12" placeholder="Escreva aqui a sua mensagem..." required></textarea>
+        <br>
+        <input type="submit" value="ENVIAR" id="enviar">
+     </main>
+    </form>
+    <a href="mailto:willian.marcos7@hotmail.com" id="ma-il">Enviar e-mail</a>
+    <p>Este formulário consegue fazer o envio das informações por e-mail sem recursos back-end.</p>
+<script>
+    const form = document.querySelector('#formulario');
+    const botao_email = document.querySelector('#ma-il');
+
+    form.addEventListener('submit', acao);
+
+    function acao(recarregar){
+        recarregar.preventDefault();
+        const formu = new FormData(this);
+        botao_email.setAttribute('href', `mailto:willian.marcos7@hotmail.com?subject=NOME: ${formu.get('nome')} / EMAIL: ${formu.get('email')}&body=MENSAGEM: ${formu.get('msg')}`);
+        botao_email.click();
+    }
+</script>
+</body>
+</html>

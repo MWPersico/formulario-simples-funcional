@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif, serif;
+    background-color:#c8d600a4;
+    background-image:url(stardust.png);
+
+}
+
+#formulario{
+    background-color:greenyellow;
+    position:absolute;
+    top:65%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    border-radius:10px;
+    width:440px;
+    border:2px solid;
+    display:block;
+}
+
+h1{
+    font-family: 'Permanent Marker', cursive;
+    font-size:2.5em;
+    position:absolute;
+    top:5%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    width:1200px;
+    text-align:center;
+}
+
+header{
+    display:flex;
+}
+
+h2{
+    text-align:center;
+    margin:10px;
+    font-size:2em;
+}
+
+main{
+    padding:0 0 10px 16px;
+    display:block;
+    margin-left:60px;
+    width:100%;
+}
+
+img[src="logo2.png"]{
+    position:absolute;
+    top:28%;
+    left:50%;
+    transform:translate(-50%, -50%)
+
+}
+
+input{
+    font-size:1.2em;
+    margin-bottom:10px;
+    padding-left:10px;
+    width:260px;
+    background-color:#fff;
+}
+
+textarea{
+    background-color:#fff;
+}
+
+#enviar{
+    background-color:rgb(38, 75, 197);
+    font-weight:bold;
+    color:white;
+    font-size:1.5em;
+    border-radius:15px;
+    display:block;
+    margin-left:14px;
+    margin-top:5px;
+    padding:4px;
+    border:3px solid black;
+}
+
+#enviar:hover{
+    background-color:rgb(0, 55, 236);
+    cursor:pointer;
+}
+
+label{
+    font-weight:bold;
+    font-size:1.2em;
+    margin-left:-70px;
+}
+
+label[for="msg"]{
+    margin-left:50px;
+}
+
+p{
+    position:absolute;
+    top:92%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    font-family:'Permanent Marker', cursive;
+    font-size:1.2em;
+    text-align:center;
+}
+
+#ma-il{
+    opacity:0;
+    font-size:1pt;
+}
+
+#ma-il:hover{
+    cursor:default;
+}
